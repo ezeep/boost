@@ -446,3 +446,7 @@
 	path = libs/xpressive
 	url = http://github.com/boostorg/xpressive.git
         fetchRecurseSubmodules = on-demand
+[submodule "smart_ptr"]
+	path = libs/smart_ptr
+	url = http://github.com/boostorg/smart_ptr.git
+        fetchRecurseSubmodules = on-demand
