@@ -1,0 +1,4 @@
+[submodule "lambda"]
+	path = libs/lambda
+	url = http://github.com/boostorg/lambda.git
+        fetchRecurseSubmodules = on-demand
