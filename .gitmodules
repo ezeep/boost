@@ -2,3 +2,51 @@
 	path = libs/smart_ptr
 	url = http://github.com/boostorg/smart_ptr.git
         fetchRecurseSubmodules = on-demand
+[submodule "rational"]
+	path = libs/rational
+	url = http://github.com/boostorg/rational.git
+        fetchRecurseSubmodules = on-demand
+[submodule "array"]
+	path = libs/array
+	url = http://github.com/boostorg/array.git
+        fetchRecurseSubmodules = on-demand
+[submodule "utility"]
+	path = libs/utility
+	url = http://github.com/boostorg/utility.git
+        fetchRecurseSubmodules = on-demand
+[submodule "random"]
+	path = libs/random
+	url = http://github.com/boostorg/random.git
+        fetchRecurseSubmodules = on-demand
+[submodule "iterator"]
+	path = libs/iterator
+	url = http://github.com/boostorg/iterator.git
+        fetchRecurseSubmodules = on-demand
+[submodule "timer"]
+	path = libs/timer
+	url = http://github.com/boostorg/timer.git
+        fetchRecurseSubmodules = on-demand
+[submodule "compose"]
+	path = libs/compose
+	url = http://github.com/boostorg/compose.git
+        fetchRecurseSubmodules = on-demand
+[submodule "config"]
+	path = libs/config
+	url = http://github.com/boostorg/config.git
+        fetchRecurseSubmodules = on-demand
+[submodule "functional"]
+	path = libs/functional
+	url = http://github.com/boostorg/functional.git
+        fetchRecurseSubmodules = on-demand
+[submodule "integer"]
+	path = libs/integer
+	url = http://github.com/boostorg/integer.git
+        fetchRecurseSubmodules = on-demand
+[submodule "type_traits"]
+	path = libs/type_traits
+	url = http://github.com/boostorg/type_traits.git
+        fetchRecurseSubmodules = on-demand
+[submodule "conversion"]
+	path = libs/conversion
+	url = http://github.com/boostorg/conversion.git
+        fetchRecurseSubmodules = on-demand
