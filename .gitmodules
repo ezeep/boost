@@ -146,6 +146,10 @@
 	path = tools/inspect
 	url = http://github.com/boostorg/inspect.git
         fetchRecurseSubmodules = on-demand
+[submodule "optional"]
+	path = libs/optional
+	url = http://github.com/boostorg/optional.git
+        fetchRecurseSubmodules = on-demand
 [submodule "preprocessor"]
 	path = libs/preprocessor
 	url = http://github.com/boostorg/preprocessor.git
