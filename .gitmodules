@@ -54,3 +54,19 @@
 	path = libs/graph
 	url = http://github.com/boostorg/graph.git
         fetchRecurseSubmodules = on-demand
+[submodule "detail"]
+	path = libs/detail
+	url = http://github.com/boostorg/detail.git
+        fetchRecurseSubmodules = on-demand
+[submodule "concept_check"]
+	path = libs/concept_check
+	url = http://github.com/boostorg/concept_check.git
+        fetchRecurseSubmodules = on-demand
+[submodule "disjoint_sets"]
+	path = libs/disjoint_sets
+	url = http://github.com/boostorg/disjoint_sets.git
+        fetchRecurseSubmodules = on-demand
+[submodule "property_map"]
+	path = libs/property_map
+	url = http://github.com/boostorg/property_map.git
+        fetchRecurseSubmodules = on-demand
