@@ -1,0 +1,4 @@
+[submodule "spirit"]
+	path = libs/spirit
+	url = http://github.com/boostorg/spirit.git
+        fetchRecurseSubmodules = on-demand
