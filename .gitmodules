@@ -50,3 +50,7 @@
 	path = libs/conversion
 	url = http://github.com/boostorg/conversion.git
         fetchRecurseSubmodules = on-demand
+[submodule "graph"]
+	path = libs/graph
+	url = http://github.com/boostorg/graph.git
+        fetchRecurseSubmodules = on-demand
