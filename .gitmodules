@@ -254,3 +254,7 @@
 	path = libs/iostreams
 	url = http://github.com/boostorg/iostreams.git
         fetchRecurseSubmodules = on-demand
+[submodule "ptr_container"]
+	path = libs/ptr_container
+	url = http://github.com/boostorg/ptr_container.git
+        fetchRecurseSubmodules = on-demand
