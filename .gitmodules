@@ -1,0 +1,4 @@
+[submodule "python"]
+	path = libs/python
+	url = http://github.com/boostorg/python.git
+        fetchRecurseSubmodules = on-demand
