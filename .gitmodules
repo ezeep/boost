@@ -82,3 +82,7 @@
 	path = libs/disjoint_sets
 	url = http://github.com/boostorg/disjoint_sets.git
         fetchRecurseSubmodules = on-demand
+[submodule "build"]
+	path = tools/build
+	url = http://github.com/boostorg/build.git
+        fetchRecurseSubmodules = on-demand
