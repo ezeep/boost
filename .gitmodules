@@ -110,3 +110,7 @@
 	path = libs/crc
 	url = http://github.com/boostorg/crc.git
         fetchRecurseSubmodules = on-demand
+[submodule "math"]
+	path = libs/math
+	url = http://github.com/boostorg/math.git
+        fetchRecurseSubmodules = on-demand
