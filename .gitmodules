@@ -1,0 +1,4 @@
+[submodule "thread"]
+	path = libs/thread
+	url = http://github.com/boostorg/thread.git
+        fetchRecurseSubmodules = on-demand
