@@ -242,6 +242,10 @@
 	path = libs/wave
 	url = http://github.com/boostorg/wave.git
         fetchRecurseSubmodules = on-demand
+[submodule "parameter"]
+	path = libs/parameter
+	url = http://github.com/boostorg/parameter.git
+        fetchRecurseSubmodules = on-demand
 [submodule "range"]
 	path = libs/range
 	url = http://github.com/boostorg/range.git
