@@ -30,6 +30,10 @@
 	path = libs/disjoint_sets
 	url = http://github.com/boostorg/disjoint_sets.git
         fetchRecurseSubmodules = on-demand
+[submodule "regex"]
+	path = libs/regex
+	url = http://github.com/boostorg/regex.git
+        fetchRecurseSubmodules = on-demand
 [submodule "random"]
 	path = libs/random
 	url = http://github.com/boostorg/random.git
