@@ -142,3 +142,7 @@
 	path = libs/mpl
 	url = http://github.com/boostorg/mpl.git
         fetchRecurseSubmodules = on-demand
+[submodule "io"]
+	path = libs/io
+	url = http://github.com/boostorg/io.git
+        fetchRecurseSubmodules = on-demand
