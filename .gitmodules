@@ -2,3 +2,19 @@
 	path = libs/smart_ptr
 	url = http://github.com/boostorg/smart_ptr.git
         fetchRecurseSubmodules = on-demand
+[submodule "build"]
+	path = tools/build
+	url = http://github.com/boostorg/build.git
+        fetchRecurseSubmodules = on-demand
+[submodule "bcp"]
+	path = tools/bcp
+	url = http://github.com/boostorg/bcp.git
+        fetchRecurseSubmodules = on-demand
+[submodule "inspect"]
+	path = tools/inspect
+	url = http://github.com/boostorg/inspect.git
+        fetchRecurseSubmodules = on-demand
+[submodule "boostbook"]
+	path = tools/boostbook
+	url = http://github.com/boostorg/boostbook.git
+        fetchRecurseSubmodules = on-demand
