@@ -178,3 +178,7 @@
 	path = libs/signals
 	url = http://github.com/boostorg/signals.git
         fetchRecurseSubmodules = on-demand
+[submodule "filesystem"]
+	path = libs/filesystem
+	url = http://github.com/boostorg/filesystem.git
+        fetchRecurseSubmodules = on-demand
