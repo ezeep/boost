@@ -210,3 +210,7 @@
 	path = tools/boostbook
 	url = http://github.com/boostorg/boostbook.git
         fetchRecurseSubmodules = on-demand
+[submodule "algorithm"]
+	path = libs/algorithm
+	url = http://github.com/boostorg/algorithm.git
+        fetchRecurseSubmodules = on-demand
