@@ -86,3 +86,7 @@
 	path = libs/test
 	url = http://github.com/boostorg/test.git
         fetchRecurseSubmodules = on-demand
+[submodule "pool"]
+	path = libs/pool
+	url = http://github.com/boostorg/pool.git
+        fetchRecurseSubmodules = on-demand
