@@ -12,6 +12,7 @@
  *
  * See http://www.boost.org for most recent version including documentation.
  *
+ *  2001-01-23  made it compile with Borland (David Abrahams)
  *  2001-01-22  added --diff option (Jens Maurer)
  */
 
@@ -47,6 +48,8 @@ std::string get_host()
   return "win32";
 #elif defined __BEOS__
   return "beos";
+#elif defined __hpux
+  return "hpux";
 #else
 # error Please adapt for your platform
 #endif
@@ -272,7 +275,10 @@ previous_results_type read_previous_results(std::istream & is)
 bool execute(const std::string & command)
 {
   std::cout << command << std::endl; // fix: endl ensures cout ordering
-  return std::system(command.c_str()) == 0;
+  int ret = std::system(command.c_str());
+  if(ret != 0)
+    std::cout << "Return code: " << ret << std::endl;
+  return ret == 0;
 }
 
 enum test_result {
@@ -382,7 +388,7 @@ void do_tests(std::ostream & out,
     previous_results_type::const_iterator prev_iter =
       previous_results.find(file);
     std::string previous = (prev_iter == previous_results.end() ?
-			    "" : prev_iter->second);
+			    std::string("") : prev_iter->second);
     std::string::size_type i = 0;
 
     for(ForwardIterator it = firstcompiler; it != lastcompiler; ++it, ++i) {
@@ -413,20 +419,23 @@ int main(int argc, char * argv[])
 {
   configuration config = parse_command_line(argv+1, argv+argc);
     
-  std::list<entry> l;
+  std::list<entry> compilers;
   read_compiler_configuration(config.compiler_config_file,
-			      std::back_inserter(l));
+			      std::back_inserter(compilers));
   std::string host = get_host();
-  for(std::list<entry>::iterator it = l.begin(); it != l.end(); ) {
+  for(std::list<entry>::iterator it = compilers.begin(); it != compilers.end(); ) {
     if(it->os == host && (config.compiler == "*" ||
 			  it->identifier == config.compiler)) {
       replace_environment(it->compile_only_command);
       replace_environment(it->compile_link_command);
       ++it;
     } else {
-      it = l.erase(it);
+      it = compilers.erase(it);
     }
   }
+  
+  if(compilers.empty())
+     std::cerr << "You do not have any compatible compilers defined." << std::endl;  
 
   // if explicit test requested, write temporary file for do_tests
   if(config.test != "") {
@@ -458,14 +467,14 @@ int main(int argc, char * argv[])
       << "<p>\n" 
       << "<table border=\"1\" cellspacing=\"0\" cellpadding=\"5\">\n";
     
-  do_tests(out, l.begin(), l.end(), config.test_config_file, config.boostpath,
+  do_tests(out, compilers.begin(), compilers.end(), config.test_config_file, config.boostpath,
 	   previous_results, config.highlight_differences);
 
   out << "</table></p>\n<p>\n";
   if(host == "linux")
     out << "Notes: A hand-crafted &lt;limits&gt; Standard header has been\n"
 	<< "applied to all configurations.\n"
-	<< "The tests were run on a GNU libc 2.2 system which has improved\n"
+	<< "The tests were run on a GNU libc 2.2.1 system which has improved\n"
 	<< "wide character support compared to previous versions.";
   else if(host == "irix" || host == "tru64")
     out << "Note: For the 'clib' configuration, the missing new-style C\n"
