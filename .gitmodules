@@ -34,3 +34,95 @@
 	path = libs/rational
 	url = http://github.com/boostorg/rational.git
         fetchRecurseSubmodules = on-demand
+[submodule "array"]
+	path = libs/array
+	url = http://github.com/boostorg/array.git
+        fetchRecurseSubmodules = on-demand
+[submodule "bind"]
+	path = libs/bind
+	url = http://github.com/boostorg/bind.git
+        fetchRecurseSubmodules = on-demand
+[submodule "thread"]
+	path = libs/thread
+	url = http://github.com/boostorg/thread.git
+        fetchRecurseSubmodules = on-demand
+[submodule "property_map"]
+	path = libs/property_map
+	url = http://github.com/boostorg/property_map.git
+        fetchRecurseSubmodules = on-demand
+[submodule "detail"]
+	path = libs/detail
+	url = http://github.com/boostorg/detail.git
+        fetchRecurseSubmodules = on-demand
+[submodule "pool"]
+	path = libs/pool
+	url = http://github.com/boostorg/pool.git
+        fetchRecurseSubmodules = on-demand
+[submodule "compatibility"]
+	path = libs/compatibility
+	url = http://github.com/boostorg/compatibility.git
+        fetchRecurseSubmodules = on-demand
+[submodule "test"]
+	path = libs/test
+	url = http://github.com/boostorg/test.git
+        fetchRecurseSubmodules = on-demand
+[submodule "type_traits"]
+	path = libs/type_traits
+	url = http://github.com/boostorg/type_traits.git
+        fetchRecurseSubmodules = on-demand
+[submodule "iterator"]
+	path = libs/iterator
+	url = http://github.com/boostorg/iterator.git
+        fetchRecurseSubmodules = on-demand
+[submodule "any"]
+	path = libs/any
+	url = http://github.com/boostorg/any.git
+        fetchRecurseSubmodules = on-demand
+[submodule "tuple"]
+	path = libs/tuple
+	url = http://github.com/boostorg/tuple.git
+        fetchRecurseSubmodules = on-demand
+[submodule "static_assert"]
+	path = libs/static_assert
+	url = http://github.com/boostorg/static_assert.git
+        fetchRecurseSubmodules = on-demand
+[submodule "graph"]
+	path = libs/graph
+	url = http://github.com/boostorg/graph.git
+        fetchRecurseSubmodules = on-demand
+[submodule "regex"]
+	path = libs/regex
+	url = http://github.com/boostorg/regex.git
+        fetchRecurseSubmodules = on-demand
+[submodule "preprocessor"]
+	path = libs/preprocessor
+	url = http://github.com/boostorg/preprocessor.git
+        fetchRecurseSubmodules = on-demand
+[submodule "math"]
+	path = libs/math
+	url = http://github.com/boostorg/math.git
+        fetchRecurseSubmodules = on-demand
+[submodule "concept_check"]
+	path = libs/concept_check
+	url = http://github.com/boostorg/concept_check.git
+        fetchRecurseSubmodules = on-demand
+[submodule "crc"]
+	path = libs/crc
+	url = http://github.com/boostorg/crc.git
+        fetchRecurseSubmodules = on-demand
+[submodule "tokenizer"]
+	path = libs/tokenizer
+	url = http://github.com/boostorg/tokenizer.git
+        fetchRecurseSubmodules = on-demand
+[submodule "conversion"]
+	path = libs/conversion
+	url = http://github.com/boostorg/conversion.git
+        fetchRecurseSubmodules = on-demand
+[submodule "python"]
+	path = libs/python
+	url = http://github.com/boostorg/python.git
+        fetchRecurseSubmodules = on-demand
+[submodule "function"]
+	path = libs/function
+	url = http://github.com/boostorg/function.git
+        fetchRecurseSubmodules = on-demand
