@@ -94,3 +94,7 @@
 	path = libs/compatibility
 	url = http://github.com/boostorg/compatibility.git
         fetchRecurseSubmodules = on-demand
+[submodule "crc"]
+	path = libs/crc
+	url = http://github.com/boostorg/crc.git
+        fetchRecurseSubmodules = on-demand
