@@ -90,3 +90,7 @@
 	path = libs/pool
 	url = http://github.com/boostorg/pool.git
         fetchRecurseSubmodules = on-demand
+[submodule "compatibility"]
+	path = libs/compatibility
+	url = http://github.com/boostorg/compatibility.git
+        fetchRecurseSubmodules = on-demand
