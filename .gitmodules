@@ -34,6 +34,10 @@
 	path = libs/random
 	url = http://github.com/boostorg/random.git
         fetchRecurseSubmodules = on-demand
+[submodule "test"]
+	path = libs/test
+	url = http://github.com/boostorg/test.git
+        fetchRecurseSubmodules = on-demand
 [submodule "graph"]
 	path = libs/graph
 	url = http://github.com/boostorg/graph.git
