@@ -1,0 +1,4 @@
+[submodule "regex"]
+	path = libs/regex
+	url = http://github.com/boostorg/regex.git
+        fetchRecurseSubmodules = on-demand
