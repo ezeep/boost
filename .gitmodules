@@ -142,6 +142,10 @@
 	path = libs/lambda
 	url = http://github.com/boostorg/lambda.git
         fetchRecurseSubmodules = on-demand
+[submodule "inspect"]
+	path = tools/inspect
+	url = http://github.com/boostorg/inspect.git
+        fetchRecurseSubmodules = on-demand
 [submodule "preprocessor"]
 	path = libs/preprocessor
 	url = http://github.com/boostorg/preprocessor.git
