@@ -1,0 +1,4 @@
+[submodule "type_traits"]
+	path = libs/type_traits
+	url = http://github.com/boostorg/type_traits.git
+        fetchRecurseSubmodules = on-demand
