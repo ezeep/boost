@@ -82,3 +82,7 @@
 	path = libs/rational
 	url = http://github.com/boostorg/rational.git
         fetchRecurseSubmodules = on-demand
+[submodule "test"]
+	path = libs/test
+	url = http://github.com/boostorg/test.git
+        fetchRecurseSubmodules = on-demand
