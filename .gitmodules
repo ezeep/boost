@@ -1,0 +1,4 @@
+[submodule "mpl"]
+	path = libs/mpl
+	url = http://github.com/boostorg/mpl.git
+        fetchRecurseSubmodules = on-demand
