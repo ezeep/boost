@@ -170,6 +170,10 @@
 	path = libs/mpl
 	url = http://github.com/boostorg/mpl.git
         fetchRecurseSubmodules = on-demand
+[submodule "multi_index"]
+	path = libs/multi_index
+	url = http://github.com/boostorg/multi_index.git
+        fetchRecurseSubmodules = on-demand
 [submodule "ublas"]
 	path = libs/numeric/ublas
 	url = http://github.com/boostorg/ublas.git
