@@ -174,6 +174,10 @@
 	path = libs/multi_index
 	url = http://github.com/boostorg/multi_index.git
         fetchRecurseSubmodules = on-demand
+[submodule "logic"]
+	path = libs/logic
+	url = http://github.com/boostorg/logic.git
+        fetchRecurseSubmodules = on-demand
 [submodule "ublas"]
 	path = libs/numeric/ublas
 	url = http://github.com/boostorg/ublas.git
