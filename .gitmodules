@@ -170,6 +170,10 @@
 	path = libs/numeric/ublas
 	url = http://github.com/boostorg/ublas.git
         fetchRecurseSubmodules = on-demand
+[submodule "variant"]
+	path = libs/variant
+	url = http://github.com/boostorg/variant.git
+        fetchRecurseSubmodules = on-demand
 [submodule "interval"]
 	path = libs/numeric/interval
 	url = http://github.com/boostorg/interval.git
