@@ -82,3 +82,7 @@
 	path = libs/graph
 	url = http://github.com/boostorg/graph.git
         fetchRecurseSubmodules = on-demand
+[submodule "build"]
+	path = tools/build
+	url = http://github.com/boostorg/build.git
+        fetchRecurseSubmodules = on-demand
