@@ -2,6 +2,10 @@
 	path = libs/date_time
 	url = http://github.com/boostorg/date_time.git
         fetchRecurseSubmodules = on-demand
+[submodule "exception"]
+	path = libs/exception
+	url = http://github.com/boostorg/exception.git
+        fetchRecurseSubmodules = on-demand
 [submodule "smart_ptr"]
 	path = libs/smart_ptr
 	url = http://github.com/boostorg/smart_ptr.git
