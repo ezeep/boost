@@ -1,0 +1,4 @@
+[submodule "iterator"]
+	path = libs/iterator
+	url = http://github.com/boostorg/iterator.git
+        fetchRecurseSubmodules = on-demand
