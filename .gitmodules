@@ -150,6 +150,10 @@
 	path = libs/multi_array
 	url = http://github.com/boostorg/multi_array.git
         fetchRecurseSubmodules = on-demand
+[submodule "format"]
+	path = libs/format
+	url = http://github.com/boostorg/format.git
+        fetchRecurseSubmodules = on-demand
 [submodule "signals"]
 	path = libs/signals
 	url = http://github.com/boostorg/signals.git
