@@ -8,7 +8,7 @@ Compiler Status: beos
 <h1><img border border="0" src="../c++boost.gif" width="277" height="86"></h1>
 <h1>Compiler Status: beos</h1>
 
-<p><b>Run Date:</b> 21 Jan 2001 12:29 GMT</p>
+<p><b>Run Date:</b> 04 Mar 2001 12:08 GMT</p>
 <p><b>System Configuration:</b> BeOS 5 Intel Edition</p>
 <p>
 <table border="1" cellspacing="0" cellpadding="5">
@@ -27,8 +27,8 @@ Compiler Status: beos
 <tr>
 <td><a href="../libs/array/array1.cpp">libs/array/array1.cpp</a></td>
 <td>run</td>
-<td><font color="#FF0000">Fail</font></td>
-<td><font color="#FF0000">Fail</font></td>
+<td>Pass</td>
+<td>Pass</td>
 </tr>
 <tr>
 <td><a href="../libs/concept_check/concept_check_test.cpp">libs/concept_check/concept_check_test.cpp</a></td>
@@ -58,7 +58,7 @@ Compiler Status: beos
 <td><a href="../libs/conversion/cast_test.cpp">libs/conversion/cast_test.cpp</a></td>
 <td>run</td>
 <td><font color="#FF0000">Fail</font></td>
-<td>Pass</td>
+<td><font color="#FF0000">Fail</font></td>
 </tr>
 <tr>
 <td><a href="../libs/conversion/lexical_cast_test.cpp">libs/conversion/lexical_cast_test.cpp</a></td>
@@ -94,10 +94,16 @@ Compiler Status: beos
 <td><a href="../libs/integer/integer_traits_test.cpp">libs/integer/integer_traits_test.cpp</a></td>
 <td>run</td>
 <td><font color="#FF0000">Fail</font></td>
-<td><font color="#FF0000">Fail</font></td>
+<td>Pass</td>
 </tr>
 <tr>
 <td><a href="../libs/rational/rational_example.cpp">libs/rational/rational_example.cpp</a></td>
+<td>run</td>
+<td><font color="#FF0000">Fail</font></td>
+<td><font color="#FF0000">Fail</font></td>
+</tr>
+<tr>
+<td><a href="../libs/rational/rational_test.cpp">libs/rational/rational_test.cpp</a></td>
 <td>run</td>
 <td><font color="#FF0000">Fail</font></td>
 <td><font color="#FF0000">Fail</font></td>
@@ -182,7 +188,19 @@ Compiler Status: beos
 </tr>
 <tr>
 <td><a href="../libs/static_assert/static_assert_test_fail_8.cpp">libs/static_assert/static_assert_test_fail_8.cpp</a></td>
-<td>compile-fail</td>
+<td>link-fail</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/test/example/test_tools_example.cpp">libs/test/example/test_tools_example.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/test/test/test_tools_fail2.cpp">libs/test/test/test_tools_fail2.cpp</a></td>
+<td>run-fail</td>
 <td>Pass</td>
 <td>Pass</td>
 </tr>
@@ -193,28 +211,106 @@ Compiler Status: beos
 <td><font color="#FF0000">Fail</font></td>
 </tr>
 <tr>
+<td><a href="../libs/type_traits/tests/alignment_test.cpp">libs/type_traits/tests/alignment_test.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/type_traits/tests/arithmetic_traits_test.cpp">libs/type_traits/tests/arithmetic_traits_test.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/type_traits/tests/composite_traits_test.cpp">libs/type_traits/tests/composite_traits_test.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/type_traits/tests/cv_traits_test.cpp">libs/type_traits/tests/cv_traits_test.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/type_traits/tests/is_convertible_test.cpp">libs/type_traits/tests/is_convertible_test.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/type_traits/tests/is_same_test.cpp">libs/type_traits/tests/is_same_test.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/type_traits/tests/object_type_traits_test.cpp">libs/type_traits/tests/object_type_traits_test.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/type_traits/tests/transform_traits_test.cpp">libs/type_traits/tests/transform_traits_test.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
 <td><a href="../libs/utility/call_traits_test.cpp">libs/utility/call_traits_test.cpp</a></td>
-<td>compile</td>
+<td>run</td>
 <td>Pass</td>
 <td>Pass</td>
 </tr>
 <tr>
 <td><a href="../libs/utility/compressed_pair_test.cpp">libs/utility/compressed_pair_test.cpp</a></td>
-<td>compile</td>
+<td>run</td>
 <td>Pass</td>
 <td>Pass</td>
 </tr>
 <tr>
+<td><a href="../libs/utility/counting_iterator_test.cpp">libs/utility/counting_iterator_test.cpp</a></td>
+<td>run</td>
+<td><font color="#FF0000">Fail</font></td>
+<td><font color="#FF0000">Fail</font></td>
+</tr>
+<tr>
 <td><a href="../libs/utility/iterator_adaptor_test.cpp">libs/utility/iterator_adaptor_test.cpp</a></td>
 <td>run</td>
+<td><font color="#FF0000">Fail</font></td>
+<td><font color="#FF0000">Fail</font></td>
+</tr>
+<tr>
+<td><a href="../libs/utility/iter_adaptor_fail_expected1.cpp">libs/utility/iter_adaptor_fail_expected1.cpp</a></td>
+<td>compile-fail</td>
 <td>Pass</td>
 <td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/utility/iter_adaptor_fail_expected2.cpp">libs/utility/iter_adaptor_fail_expected2.cpp</a></td>
+<td>compile-fail</td>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td><a href="../libs/utility/iterator_traits_test.cpp">libs/utility/iterator_traits_test.cpp</a></td>
+<td>run</td>
+<td><font color="#FF0000">Fail</font></td>
+<td><font color="#FF0000">Fail</font></td>
 </tr>
 <tr>
 <td><a href="../libs/utility/iterators_test.cpp">libs/utility/iterators_test.cpp</a></td>
 <td>run</td>
 <td><font color="#FF0000">Fail</font></td>
 <td><font color="#FF0000">Fail</font></td>
+</tr>
+<tr>
+<td><a href="../libs/utility/numeric_traits_test.cpp">libs/utility/numeric_traits_test.cpp</a></td>
+<td>run</td>
+<td>Pass</td>
+<td>Pass</td>
 </tr>
 <tr>
 <td><a href="../libs/utility/operators_test.cpp">libs/utility/operators_test.cpp</a></td>
@@ -225,12 +321,6 @@ Compiler Status: beos
 <tr>
 <td><a href="../libs/utility/tie_example.cpp">libs/utility/tie_example.cpp</a></td>
 <td>run</td>
-<td>Pass</td>
-<td>Pass</td>
-</tr>
-<tr>
-<td><a href="../libs/utility/type_traits_test.cpp">libs/utility/type_traits_test.cpp</a></td>
-<td>compile</td>
 <td>Pass</td>
 <td>Pass</td>
 </tr>
