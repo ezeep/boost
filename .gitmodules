@@ -82,6 +82,10 @@
 	path = libs/property_map
 	url = http://github.com/boostorg/property_map.git
         fetchRecurseSubmodules = on-demand
+[submodule "tokenizer"]
+	path = libs/tokenizer
+	url = http://github.com/boostorg/tokenizer.git
+        fetchRecurseSubmodules = on-demand
 [submodule "test"]
 	path = libs/test
 	url = http://github.com/boostorg/test.git
