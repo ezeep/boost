@@ -1,0 +1,4 @@
+[submodule "random"]
+	path = libs/random
+	url = http://github.com/boostorg/random.git
+        fetchRecurseSubmodules = on-demand
