@@ -246,3 +246,7 @@
 	path = tools/quickbook
 	url = http://github.com/boostorg/quickbook.git
         fetchRecurseSubmodules = on-demand
+[submodule "iostreams"]
+	path = libs/iostreams
+	url = http://github.com/boostorg/iostreams.git
+        fetchRecurseSubmodules = on-demand
