@@ -150,6 +150,10 @@
 	path = libs/optional
 	url = http://github.com/boostorg/optional.git
         fetchRecurseSubmodules = on-demand
+[submodule "bcp"]
+	path = tools/bcp
+	url = http://github.com/boostorg/bcp.git
+        fetchRecurseSubmodules = on-demand
 [submodule "preprocessor"]
 	path = libs/preprocessor
 	url = http://github.com/boostorg/preprocessor.git
