@@ -2,3 +2,11 @@
 	path = libs/smart_ptr
 	url = http://github.com/boostorg/smart_ptr.git
         fetchRecurseSubmodules = on-demand
+[submodule "python"]
+	path = libs/python
+	url = http://github.com/boostorg/python.git
+        fetchRecurseSubmodules = on-demand
+[submodule "random"]
+	path = libs/random
+	url = http://github.com/boostorg/random.git
+        fetchRecurseSubmodules = on-demand
