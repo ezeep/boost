@@ -230,3 +230,7 @@
 	path = libs/program_options
 	url = http://github.com/boostorg/program_options.git
         fetchRecurseSubmodules = on-demand
+[submodule "range"]
+	path = libs/range
+	url = http://github.com/boostorg/range.git
+        fetchRecurseSubmodules = on-demand
