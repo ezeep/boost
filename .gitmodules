@@ -158,6 +158,10 @@
 	path = libs/mpl
 	url = http://github.com/boostorg/mpl.git
         fetchRecurseSubmodules = on-demand
+[submodule "ublas"]
+	path = libs/numeric/ublas
+	url = http://github.com/boostorg/ublas.git
+        fetchRecurseSubmodules = on-demand
 [submodule "io"]
 	path = libs/io
 	url = http://github.com/boostorg/io.git
