@@ -242,3 +242,7 @@
 	path = libs/range
 	url = http://github.com/boostorg/range.git
         fetchRecurseSubmodules = on-demand
+[submodule "quickbook"]
+	path = tools/quickbook
+	url = http://github.com/boostorg/quickbook.git
+        fetchRecurseSubmodules = on-demand
