@@ -1,0 +1,4 @@
+[submodule "io"]
+	path = libs/io
+	url = http://github.com/boostorg/io.git
+        fetchRecurseSubmodules = on-demand
