@@ -1,0 +1,4 @@
+[submodule "bind"]
+	path = libs/bind
+	url = http://github.com/boostorg/bind.git
+        fetchRecurseSubmodules = on-demand
