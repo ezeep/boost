@@ -90,6 +90,10 @@
 	path = libs/thread
 	url = http://github.com/boostorg/thread.git
         fetchRecurseSubmodules = on-demand
+[submodule "build"]
+	path = tools/build
+	url = http://github.com/boostorg/build.git
+        fetchRecurseSubmodules = on-demand
 [submodule "any"]
 	path = libs/any
 	url = http://github.com/boostorg/any.git
