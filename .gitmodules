@@ -1,0 +1,4 @@
+[submodule "test"]
+	path = libs/test
+	url = http://github.com/boostorg/test.git
+        fetchRecurseSubmodules = on-demand
