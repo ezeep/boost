@@ -1,0 +1,4 @@
+[submodule "format"]
+	path = libs/format
+	url = http://github.com/boostorg/format.git
+        fetchRecurseSubmodules = on-demand
