@@ -1,0 +1,4 @@
+[submodule "filesystem"]
+	path = libs/filesystem
+	url = http://github.com/boostorg/filesystem.git
+        fetchRecurseSubmodules = on-demand
