@@ -1,0 +1,4 @@
+[submodule "parameter"]
+	path = libs/parameter
+	url = http://github.com/boostorg/parameter.git
+        fetchRecurseSubmodules = on-demand
