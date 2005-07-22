@@ -1,0 +1,4 @@
+[submodule "build"]
+	path = tools/build
+	url = http://github.com/boostorg/build.git
+        fetchRecurseSubmodules = on-demand
