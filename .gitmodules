@@ -1,34 +1,6 @@
-[submodule "any"]
-	path = libs/any
-	url = http://github.com/boostorg/any.git
-        fetchRecurseSubmodules = on-demand
-[submodule "array"]
-	path = libs/array
-	url = http://github.com/boostorg/array.git
-        fetchRecurseSubmodules = on-demand
-[submodule "accumulators"]
-	path = libs/accumulators
-	url = http://github.com/boostorg/accumulators.git
-        fetchRecurseSubmodules = on-demand
 [submodule "algorithm"]
 	path = libs/algorithm
 	url = http://github.com/boostorg/algorithm.git
-        fetchRecurseSubmodules = on-demand
-[submodule "asio"]
-	path = libs/asio
-	url = http://github.com/boostorg/asio.git
-        fetchRecurseSubmodules = on-demand
-[submodule "assign"]
-	path = libs/assign
-	url = http://github.com/boostorg/assign.git
-        fetchRecurseSubmodules = on-demand
-[submodule "bimap"]
-	path = libs/bimap
-	url = http://github.com/boostorg/bimap.git
-        fetchRecurseSubmodules = on-demand
-[submodule "bind"]
-	path = libs/bind
-	url = http://github.com/boostorg/bind.git
         fetchRecurseSubmodules = on-demand
 [submodule "boostbook"]
 	path = tools/boostbook
@@ -37,18 +9,6 @@
 [submodule "build"]
 	path = tools/build
 	url = http://github.com/boostorg/build.git
-        fetchRecurseSubmodules = on-demand
-[submodule "atomic"]
-	path = libs/atomic
-	url = http://github.com/boostorg/atomic.git
-        fetchRecurseSubmodules = on-demand
-[submodule "auto_index"]
-	path = tools/auto_index
-	url = http://github.com/boostorg/auto_index.git
-        fetchRecurseSubmodules = on-demand
-[submodule "bcp"]
-	path = tools/bcp
-	url = http://github.com/boostorg/bcp.git
         fetchRecurseSubmodules = on-demand
 [submodule "chrono"]
 	path = libs/chrono
@@ -114,10 +74,6 @@
 	path = libs/exception
 	url = http://github.com/boostorg/exception.git
         fetchRecurseSubmodules = on-demand
-[submodule "inspect"]
-	path = tools/inspect
-	url = http://github.com/boostorg/inspect.git
-        fetchRecurseSubmodules = on-demand
 [submodule "filesystem"]
 	path = libs/filesystem
 	url = http://github.com/boostorg/filesystem.git
@@ -178,6 +134,10 @@
 	path = libs/multiprecision
 	url = http://github.com/boostorg/multiprecision.git
         fetchRecurseSubmodules = on-demand
+[submodule "inspect"]
+	path = tools/inspect
+	url = http://github.com/boostorg/inspect.git
+        fetchRecurseSubmodules = on-demand
 [submodule "integer"]
 	path = libs/integer
 	url = http://github.com/boostorg/integer.git
@@ -197,6 +157,46 @@
 [submodule "io"]
 	path = libs/io
 	url = http://github.com/boostorg/io.git
+        fetchRecurseSubmodules = on-demand
+[submodule "accumulators"]
+	path = libs/accumulators
+	url = http://github.com/boostorg/accumulators.git
+        fetchRecurseSubmodules = on-demand
+[submodule "any"]
+	path = libs/any
+	url = http://github.com/boostorg/any.git
+        fetchRecurseSubmodules = on-demand
+[submodule "array"]
+	path = libs/array
+	url = http://github.com/boostorg/array.git
+        fetchRecurseSubmodules = on-demand
+[submodule "asio"]
+	path = libs/asio
+	url = http://github.com/boostorg/asio.git
+        fetchRecurseSubmodules = on-demand
+[submodule "assign"]
+	path = libs/assign
+	url = http://github.com/boostorg/assign.git
+        fetchRecurseSubmodules = on-demand
+[submodule "atomic"]
+	path = libs/atomic
+	url = http://github.com/boostorg/atomic.git
+        fetchRecurseSubmodules = on-demand
+[submodule "auto_index"]
+	path = tools/auto_index
+	url = http://github.com/boostorg/auto_index.git
+        fetchRecurseSubmodules = on-demand
+[submodule "bcp"]
+	path = tools/bcp
+	url = http://github.com/boostorg/bcp.git
+        fetchRecurseSubmodules = on-demand
+[submodule "bimap"]
+	path = libs/bimap
+	url = http://github.com/boostorg/bimap.git
+        fetchRecurseSubmodules = on-demand
+[submodule "bind"]
+	path = libs/bind
+	url = http://github.com/boostorg/bind.git
         fetchRecurseSubmodules = on-demand
 [submodule "iostreams"]
 	path = libs/iostreams
@@ -258,13 +258,13 @@
 	path = libs/multi_index
 	url = http://github.com/boostorg/multi_index.git
         fetchRecurseSubmodules = on-demand
-[submodule "thread"]
-	path = libs/thread
-	url = http://github.com/boostorg/thread.git
-        fetchRecurseSubmodules = on-demand
 [submodule "timer"]
 	path = libs/timer
 	url = http://github.com/boostorg/timer.git
+        fetchRecurseSubmodules = on-demand
+[submodule "thread"]
+	path = libs/thread
+	url = http://github.com/boostorg/thread.git
         fetchRecurseSubmodules = on-demand
 [submodule "numeric_conversion"]
 	path = libs/numeric/conversion
@@ -298,13 +298,13 @@
 	path = libs/predef
 	url = http://github.com/boostorg/predef.git
         fetchRecurseSubmodules = on-demand
-[submodule "preprocessor"]
-	path = libs/preprocessor
-	url = http://github.com/boostorg/preprocessor.git
-        fetchRecurseSubmodules = on-demand
 [submodule "program_options"]
 	path = libs/program_options
 	url = http://github.com/boostorg/program_options.git
+        fetchRecurseSubmodules = on-demand
+[submodule "preprocessor"]
+	path = libs/preprocessor
+	url = http://github.com/boostorg/preprocessor.git
         fetchRecurseSubmodules = on-demand
 [submodule "property_map"]
 	path = libs/property_map
@@ -330,13 +330,13 @@
 	path = tools/quickbook
 	url = http://github.com/boostorg/quickbook.git
         fetchRecurseSubmodules = on-demand
-[submodule "random"]
-	path = libs/random
-	url = http://github.com/boostorg/random.git
-        fetchRecurseSubmodules = on-demand
 [submodule "range"]
 	path = libs/range
 	url = http://github.com/boostorg/range.git
+        fetchRecurseSubmodules = on-demand
+[submodule "random"]
+	path = libs/random
+	url = http://github.com/boostorg/random.git
         fetchRecurseSubmodules = on-demand
 [submodule "ratio"]
 	path = libs/ratio
