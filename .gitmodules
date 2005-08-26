@@ -254,6 +254,10 @@
 	path = libs/typeof
 	url = http://github.com/boostorg/typeof.git
         fetchRecurseSubmodules = on-demand
+[submodule "foreach"]
+	path = libs/foreach
+	url = http://github.com/boostorg/foreach.git
+        fetchRecurseSubmodules = on-demand
 [submodule "quickbook"]
 	path = tools/quickbook
 	url = http://github.com/boostorg/quickbook.git
