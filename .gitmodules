@@ -250,6 +250,10 @@
 	path = libs/range
 	url = http://github.com/boostorg/range.git
         fetchRecurseSubmodules = on-demand
+[submodule "xpressive"]
+	path = libs/xpressive
+	url = http://github.com/boostorg/xpressive.git
+        fetchRecurseSubmodules = on-demand
 [submodule "typeof"]
 	path = libs/typeof
 	url = http://github.com/boostorg/typeof.git
