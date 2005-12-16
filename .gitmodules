@@ -1,0 +1,4 @@
+[submodule "config"]
+	path = libs/config
+	url = http://github.com/boostorg/config.git
+        fetchRecurseSubmodules = on-demand
