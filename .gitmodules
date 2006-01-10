@@ -266,6 +266,10 @@
 	path = libs/foreach
 	url = http://github.com/boostorg/foreach.git
         fetchRecurseSubmodules = on-demand
+[submodule "graph_parallel"]
+	path = libs/graph_parallel
+	url = http://github.com/boostorg/graph_parallel.git
+        fetchRecurseSubmodules = on-demand
 [submodule "quickbook"]
 	path = tools/quickbook
 	url = http://github.com/boostorg/quickbook.git
