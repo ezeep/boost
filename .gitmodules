@@ -1,0 +1,4 @@
+[submodule "multi_array"]
+	path = libs/multi_array
+	url = http://github.com/boostorg/multi_array.git
+        fetchRecurseSubmodules = on-demand
