@@ -1,0 +1,4 @@
+[submodule "serialization"]
+	path = libs/serialization
+	url = http://github.com/boostorg/serialization.git
+        fetchRecurseSubmodules = on-demand
