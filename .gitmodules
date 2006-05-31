@@ -282,3 +282,7 @@
 	path = libs/ptr_container
 	url = http://github.com/boostorg/ptr_container.git
         fetchRecurseSubmodules = on-demand
+[submodule "litre"]
+	path = tools/litre
+	url = http://github.com/boostorg/litre.git
+        fetchRecurseSubmodules = on-demand
