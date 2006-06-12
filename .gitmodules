@@ -282,6 +282,10 @@
 	path = libs/ptr_container
 	url = http://github.com/boostorg/ptr_container.git
         fetchRecurseSubmodules = on-demand
+[submodule "interprocess"]
+	path = libs/interprocess
+	url = http://github.com/boostorg/interprocess.git
+        fetchRecurseSubmodules = on-demand
 [submodule "litre"]
 	path = tools/litre
 	url = http://github.com/boostorg/litre.git
