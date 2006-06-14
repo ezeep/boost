@@ -286,6 +286,10 @@
 	path = libs/interprocess
 	url = http://github.com/boostorg/interprocess.git
         fetchRecurseSubmodules = on-demand
+[submodule "asio"]
+	path = libs/asio
+	url = http://github.com/boostorg/asio.git
+        fetchRecurseSubmodules = on-demand
 [submodule "litre"]
 	path = tools/litre
 	url = http://github.com/boostorg/litre.git
