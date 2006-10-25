@@ -1,0 +1,4 @@
+[submodule "xpressive"]
+	path = libs/xpressive
+	url = http://github.com/boostorg/xpressive.git
+        fetchRecurseSubmodules = on-demand
