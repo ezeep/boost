@@ -298,3 +298,7 @@
 	path = tools/litre
 	url = http://github.com/boostorg/litre.git
         fetchRecurseSubmodules = on-demand
+[submodule "system"]
+	path = libs/system
+	url = http://github.com/boostorg/system.git
+        fetchRecurseSubmodules = on-demand
