@@ -1,0 +1,4 @@
+[submodule "ublas"]
+	path = libs/numeric/ublas
+	url = http://github.com/boostorg/ublas.git
+        fetchRecurseSubmodules = on-demand
