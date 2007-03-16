@@ -1,0 +1,4 @@
+[submodule "units"]
+	path = libs/units
+	url = http://github.com/boostorg/units.git
+        fetchRecurseSubmodules = on-demand
