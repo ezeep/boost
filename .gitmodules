@@ -210,6 +210,10 @@
 	path = libs/signals
 	url = http://github.com/boostorg/signals.git
         fetchRecurseSubmodules = on-demand
+[submodule "gil"]
+	path = libs/gil
+	url = http://github.com/boostorg/gil.git
+        fetchRecurseSubmodules = on-demand
 [submodule "serialization"]
 	path = libs/serialization
 	url = http://github.com/boostorg/serialization.git
