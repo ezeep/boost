@@ -238,6 +238,10 @@
 	path = libs/numeric/conversion
 	url = http://github.com/boostorg/numeric_conversion.git
         fetchRecurseSubmodules = on-demand
+[submodule "intrusive"]
+	path = libs/intrusive
+	url = http://github.com/boostorg/intrusive.git
+        fetchRecurseSubmodules = on-demand
 [submodule "program_options"]
 	path = libs/program_options
 	url = http://github.com/boostorg/program_options.git
