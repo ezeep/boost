@@ -1,0 +1,8 @@
+[submodule "quickbook"]
+	path = tools/quickbook
+	url = http://github.com/boostorg/quickbook.git
+        fetchRecurseSubmodules = on-demand
+[submodule "build"]
+	path = tools/build
+	url = http://github.com/boostorg/build.git
+        fetchRecurseSubmodules = on-demand
