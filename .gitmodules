@@ -1,0 +1,4 @@
+[submodule "iostreams"]
+	path = libs/iostreams
+	url = http://github.com/boostorg/iostreams.git
+        fetchRecurseSubmodules = on-demand
