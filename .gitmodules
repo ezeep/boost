@@ -6,6 +6,10 @@
 	path = libs/fusion
 	url = http://github.com/boostorg/fusion.git
         fetchRecurseSubmodules = on-demand
+[submodule "xpressive"]
+	path = libs/xpressive
+	url = http://github.com/boostorg/xpressive.git
+        fetchRecurseSubmodules = on-demand
 [submodule "tr1"]
 	path = libs/tr1
 	url = http://github.com/boostorg/tr1.git
