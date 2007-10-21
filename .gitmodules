@@ -10,6 +10,10 @@
 	path = libs/xpressive
 	url = http://github.com/boostorg/xpressive.git
         fetchRecurseSubmodules = on-demand
+[submodule "function_types"]
+	path = libs/function_types
+	url = http://github.com/boostorg/function_types.git
+        fetchRecurseSubmodules = on-demand
 [submodule "tr1"]
 	path = libs/tr1
 	url = http://github.com/boostorg/tr1.git
