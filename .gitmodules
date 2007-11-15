@@ -38,6 +38,10 @@
 	path = libs/iostreams
 	url = http://github.com/boostorg/iostreams.git
         fetchRecurseSubmodules = on-demand
+[submodule "system"]
+	path = libs/system
+	url = http://github.com/boostorg/system.git
+        fetchRecurseSubmodules = on-demand
 [submodule "math"]
 	path = libs/math
 	url = http://github.com/boostorg/math.git
@@ -281,4 +285,8 @@
 [submodule "foreach"]
 	path = libs/foreach
 	url = http://github.com/boostorg/foreach.git
+        fetchRecurseSubmodules = on-demand
+[submodule "litre"]
+	path = tools/litre
+	url = http://github.com/boostorg/litre.git
         fetchRecurseSubmodules = on-demand
