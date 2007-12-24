@@ -1,0 +1,71 @@
+#~ Copyright Redshift Software, Inc. 2006.
+#~ Copyright Rene Rivera 2007.
+#~ Distributed under the Boost Software License, Version 1.0.
+#~ (See accompanying file LICENSE_1_0.txt or copy at
+#~ http://www.boost.org/LICENSE_1_0.txt)
+
+### Luabind <http://www.rasterbar.com/products/luabind.html>
+### Targets:
+###     /ext/luabind//luabind
+
+import extension ;
+
+import property ;
+import project ;
+import feature ;
+import common ;
+
+extension.declare luabind ;
+extension.option luabind max-arity : 5 1 2 3 4 6 7 8 9 10 ;
+extension.option luabind max-bases : 4 1 2 3 5 ;
+extension.option luabind error-checking : enable disable ;
+extension.option luabind exceptions : enable disable ;
+extension.option luabind rtti : enable disable ;
+
+rule init ( version ? : location : options * )
+{
+    version ?= default ;
+    local requirements =
+        [ extension.define luabind $(version) : $(location) : $(options) ]
+        <luabind-version>$(version)
+        <luabind-location>$(location)
+        <toolset>msvc:<define>_CRT_SECURE_NO_DEPRECATE
+        <toolset>msvc:<define>_SCL_SECURE_NO_DEPRECATE
+        <location-prefix>luabind
+        #~ <warnings>off
+        <toolset>msvc,<link>shared:<define>LUABIND_EXPORT=__declspec(dllexport)
+        <toolset>msvc,<link>shared:<define>LUABIND_IMPORT=__declspec(dllimport)
+        ;
+    local common-requirements =
+        <include>$(location)
+        <luabind-max-arity>1:<define>LUABIND_MAX_ARITY=1
+        <luabind-max-arity>2:<define>LUABIND_MAX_ARITY=2
+        <luabind-max-arity>3:<define>LUABIND_MAX_ARITY=3
+        <luabind-max-arity>4:<define>LUABIND_MAX_ARITY=4
+        <luabind-max-arity>5:<define>LUABIND_MAX_ARITY=5
+        <luabind-max-arity>6:<define>LUABIND_MAX_ARITY=6
+        <luabind-max-arity>7:<define>LUABIND_MAX_ARITY=7
+        <luabind-max-arity>8:<define>LUABIND_MAX_ARITY=8
+        <luabind-max-arity>9:<define>LUABIND_MAX_ARITY=9
+        <luabind-max-arity>10:<define>LUABIND_MAX_ARITY=10
+        <luabind-max-bases>1:<define>LUABIND_MAX_BASES=1
+        <luabind-max-bases>2:<define>LUABIND_MAX_BASES=2
+        <luabind-max-bases>3:<define>LUABIND_MAX_BASES=3
+        <luabind-max-bases>4:<define>LUABIND_MAX_BASES=4
+        <luabind-max-bases>5:<define>LUABIND_MAX_BASES=5
+        <luabind-error-checking>disable:<define>LUABIND_NO_ERROR_CHECKING
+        <luabind-exceptions>disable:<define>LUABIND_NO_EXCEPTIONS
+        <luabind-rtti>disable:<define>LUABIND_NO_RTTI
+        ;
+    
+    lib luabind
+        :   /ext/boost//boost
+            /ext/lua//luai
+            [ glob $(location)/src/*.cpp ]
+        :   $(common-requirements)
+            $(requirements)
+            <define>LUABIND_BUILDING
+        :
+        :   $(common-requirements)
+        ;
+}
