@@ -1,0 +1,18 @@
+#~ Copyright 2006 Redshift Software, Inc.
+#~ Copyright 2007 Couch World Games Inc.
+#~ Distributed under the Boost Software License, Version 1.0.
+#~ (See accompanying file LICENSE_1_0.txt or copy at
+#~ http://www.boost.org/LICENSE_1_0.txt)
+
+using zlib : 1.2.3 : $(PACKAGES)/zlib-1.2.3 ;
+using png : 1.2.24 : $(PACKAGES)/libpng-1.2.24 ;
+using jpeg : 6.b : $(PACKAGES)/jpeg-6b ;
+using directxsdk : 2007.11 : $(PACKAGES)/dxsdk-2007.11 ;
+using irrlicht : 1.4 : $(PACKAGES)/irrlicht-1.4 ;
+
+import stage ;
+
+install stage-lib
+    : /ext/irrlicht//Irrlicht/<link>static /ext/irrlicht//Irrlicht/<link>shared
+    : <location>$(STAGE_ROOT)/lib <install-dependencies>on <install-type>LIB
+    ;

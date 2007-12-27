@@ -1,0 +1,68 @@
+#~ Copyright Rene Rivera 2007.
+#~ Distributed under the Boost Software License, Version 1.0.
+#~ (See accompanying file LICENSE_1_0.txt or copy at
+#~ http://www.boost.org/LICENSE_1_0.txt)
+
+### Support for using the Direct-X SDK (as of Aug 2007 version)
+###
+###     /ext/directx//dx
+###     /ext/directx//d3d-9
+
+import extension ;
+import property ;
+import set ;
+
+extension.declare directxsdk ;
+
+rule conditional-requirements ( properties * )
+{
+    local result ;
+    local location = [ property.select <directxsdk-location> : $(properties) ] ;
+    location = $(location:G=) ;
+    if <target-os>windows in $(properties)
+    {
+        if <address-model>64 in $(properties)
+        {
+            result +=
+                <library-path>"$(location)/Lib/x64"
+                <library-path>"$(location)/Developer Runtime/x64"
+                ;
+        }
+        else
+        {
+            result +=
+                <library-path>"$(location)/Lib/x86"
+                <library-path>"$(location)/Developer Runtime/x86"
+                ;
+        }
+    }
+    return $(result) ;
+}
+
+rule init ( version ? : location : options * )
+{
+    version ?= default ;
+    local requirements =
+        [ set.difference
+            [ extension.define directxsdk $(version) : $(location) : $(options) ] :
+            <tag>@default-tag
+            ]
+        <directxsdk-version>$(version)
+        ;
+    local common-requirements =
+        <include>$(location)/Include
+        <conditional>@conditional-requirements
+        ;
+    
+    alias dx : : : :
+        $(common-requirements)
+        ;
+    
+    lib d3d-9
+        :   
+        :   $(requirements) $(common-requirements)
+            <name>d3d9
+        :
+        :   $(common-requirements)
+        ;
+}
