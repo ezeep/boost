@@ -66,14 +66,12 @@ rule init ( version ? : location : options * )
     version ?= default ;
     local requirements =
         [ extension.define irrlicht $(version) : $(location) : $(options) ]
-        <link>static:<define>OSG_LIBRARY_STATIC
         <irrlicht-version>$(version)
         <irrlicht-location>$(location)
-        ;
-    local common-requirements =
         <toolset>msvc:<define>_CRT_SECURE_NO_DEPRECATE
         <toolset>msvc:<define>_SCL_SECURE_NO_WARNINGS
-        
+        ;
+    local common-requirements =
         <include>$(location)/include
         <target-os>windows:<define>WIN32
         <target-os>windows,<address-model>64:<define>WIN64
@@ -199,7 +197,7 @@ rule init ( version ? : location : options * )
     }
     if <irrlicht-opengl>enable in $(requirements)
     {
-        ext-libs += /ext/irrlicht//gl/<link>static ;
+        ext-libs += /ext/irrlicht//gl ;
     }
     
     lib Irrlicht
@@ -212,5 +210,4 @@ rule init ( version ? : location : options * )
         :
         :   $(common-requirements)
         ;
-        explicit Irrlicht ;
 }
