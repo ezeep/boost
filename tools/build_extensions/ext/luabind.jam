@@ -35,6 +35,7 @@ rule init ( version ? : location : options * )
         #~ <warnings>off
         <toolset>msvc,<link>shared:<define>LUABIND_EXPORT=__declspec(dllexport)
         <toolset>msvc,<link>shared:<define>LUABIND_IMPORT=__declspec(dllimport)
+        <toolset>msvc:<cxxflags>-wd4251
         ;
     local common-requirements =
         <include>$(location)
