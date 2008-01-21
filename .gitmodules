@@ -62,6 +62,10 @@
 	path = libs/gil
 	url = http://github.com/boostorg/gil.git
         fetchRecurseSubmodules = on-demand
+[submodule "unordered"]
+	path = libs/unordered
+	url = http://github.com/boostorg/unordered.git
+        fetchRecurseSubmodules = on-demand
 [submodule "io"]
 	path = libs/io
 	url = http://github.com/boostorg/io.git
@@ -129,6 +133,10 @@
 [submodule "parameter"]
 	path = libs/parameter
 	url = http://github.com/boostorg/parameter.git
+        fetchRecurseSubmodules = on-demand
+[submodule "accumulators"]
+	path = libs/accumulators
+	url = http://github.com/boostorg/accumulators.git
         fetchRecurseSubmodules = on-demand
 [submodule "compatibility"]
 	path = libs/compatibility
