@@ -330,6 +330,10 @@
 	path = libs/date_time
 	url = http://github.com/boostorg/date_time.git
         fetchRecurseSubmodules = on-demand
+[submodule "unordered"]
+	path = libs/unordered
+	url = http://github.com/boostorg/unordered.git
+        fetchRecurseSubmodules = on-demand
 [submodule "accumulators"]
 	path = libs/accumulators
 	url = http://github.com/boostorg/accumulators.git
