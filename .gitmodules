@@ -1,0 +1,4 @@
+[submodule "functional"]
+	path = libs/functional
+	url = http://github.com/boostorg/functional.git
+        fetchRecurseSubmodules = on-demand
