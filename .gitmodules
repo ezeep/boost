@@ -38,6 +38,10 @@
 	path = libs/bind
 	url = http://github.com/boostorg/bind.git
         fetchRecurseSubmodules = on-demand
+[submodule "phoenix"]
+	path = libs/phoenix
+	url = http://github.com/boostorg/phoenix.git
+        fetchRecurseSubmodules = on-demand
 [submodule "property_map"]
 	path = libs/property_map
 	url = http://github.com/boostorg/property_map.git
