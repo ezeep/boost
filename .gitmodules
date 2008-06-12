@@ -306,6 +306,10 @@
 	path = libs/mpi
 	url = http://github.com/boostorg/mpi.git
         fetchRecurseSubmodules = on-demand
+[submodule "unordered"]
+	path = libs/unordered
+	url = http://github.com/boostorg/unordered.git
+        fetchRecurseSubmodules = on-demand
 [submodule "property_tree"]
 	path = libs/property_tree
 	url = http://github.com/boostorg/property_tree.git
