@@ -334,3 +334,7 @@
 	path = libs/asio
 	url = http://github.com/boostorg/asio.git
         fetchRecurseSubmodules = on-demand
+[submodule "accumulators"]
+	path = libs/accumulators
+	url = http://github.com/boostorg/accumulators.git
+        fetchRecurseSubmodules = on-demand
