@@ -66,6 +66,10 @@
 	path = libs/integer
 	url = http://github.com/boostorg/integer.git
         fetchRecurseSubmodules = on-demand
+[submodule "proto"]
+	path = libs/proto
+	url = http://github.com/boostorg/proto.git
+        fetchRecurseSubmodules = on-demand
 [submodule "tokenizer"]
 	path = libs/tokenizer
 	url = http://github.com/boostorg/tokenizer.git
