@@ -1,0 +1,4 @@
+[submodule "signals2"]
+	path = libs/signals2
+	url = http://github.com/boostorg/signals2.git
+        fetchRecurseSubmodules = on-demand
