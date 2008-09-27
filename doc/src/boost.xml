@@ -49,8 +49,22 @@
   <part id="libraries">
     <title>The Boost C++ Libraries (BoostBook Subset)</title>
 
+    <xi:include href="accumulators.xml"/>
+
     <xi:include href="../../libs/any/doc/any.xml"/>
     <xi:include href="../../libs/array/doc/array.xml"/>
+
+   <library name="Asio" dirname="asio" html-only="1">
+     <libraryinfo>
+       <author>
+         <firstname>Christopher</firstname>
+         <surname>Kohlhoff</surname>
+       </author>
+
+       <librarypurpose>Portable networking, including sockets, timers, hostname resolution and socket iostreams.</librarypurpose>
+       <librarycategory name="category:io"/>
+     </libraryinfo>
+   </library>
 
    <library name="Bind" dirname="bind" html-only="1">
      <libraryinfo>
@@ -522,6 +536,8 @@
      </libraryinfo>
    </library>
    
+   <xi:include href="proto.xml"/>
+
    <library name="Python" dirname="python" html-only="1">
      <libraryinfo>
        <author>
@@ -638,7 +654,7 @@
      </libraryinfo>
    </library>
    
-   <xi:include href="../../libs/thread/doc/thread.xml"/>
+   <xi:include href="thread.xml"/>
 
    <library name="Timer" dirname="timer" html-only="1" 
             url="../../libs/timer/index.html">
@@ -707,6 +723,10 @@
      </libraryinfo>
    </library>
 
+   <xi:include href="units.xml"/>
+
+   <xi:include href="unordered.xml"/>
+
    <library name="Utility" dirname="utility" html-only="1">
      <libraryinfo>
        <author>
@@ -731,24 +751,23 @@
 
   <part id="tools">
     <title>Boost Tools</title>
-    <para>
-      Boost developers, testers, and maintainers have developed various programs to 
-      help with the administration of the Boost Libraries. Like everything else about 
-      Boost, these tools are available in source form, and are part of the regular 
-      Boost distribution.
-    </para>
-    <para>
-      Users may find these tools useful when porting Boost libraries to a new platform, 
-      or for use with their own applications.
-    </para>
-
+    <partintro>
+      <para>
+        Boost developers, testers, and maintainers have developed various programs to 
+        help with the administration of the Boost Libraries. Like everything else about 
+        Boost, these tools are available in source form, and are part of the regular 
+        Boost distribution.
+      </para>
+      <para>
+        Users may find these tools useful when porting Boost libraries to a new platform, 
+        or for use with their own applications.
+      </para>
+    </partintro>
     <xi:include href="../../tools/boostbook/doc/boostbook.xml"/>
     <xi:include href="quickbook.xml"/>
     <xi:include href="bjam.xml"/>
     <xi:include href="../../tools/build/v2/doc/src/userman.xml"/>
   </part>
-  
-  <xi:include href="using.xml"/>
 </boostbook>
 
 

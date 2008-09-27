@@ -125,8 +125,8 @@ path in place of the Boost root directory.
 
 __ `Link Your Program to a Boost Library`_
 
-Or, Custom Build and Install
-----------------------------
+Or, Build Custom Binaries
+-------------------------
 
 If you're using a compiler other than your system's default, you'll
 need to use Boost.Build_ to create binaries.  You'll also
@@ -140,7 +140,14 @@ For example, your session might look like this:
 .. parsed-literal::
 
    $ cd ~/|boost_ver|
-   $ bjam **--build-dir=**\ /tmp/build-boost **--toolset=**\ gcc
+   $ bjam **--build-dir=**\ /tmp/build-boost **--toolset=**\ gcc stage
+
+That will build static and shared non-debug multi-threaded variations of the libraries. To build all variations:
+
+.. parsed-literal::
+
+   $ cd ~/|boost_ver|
+   $ bjam **--build-dir=**\ /tmp/build-boost **--toolset=**\ gcc **--build-type=complete** stage
 
 .. include:: detail/build-from-source-tail.rst
 
@@ -153,7 +160,7 @@ A. You can specify the full path to each library:
    .. parsed-literal::
 
      $ c++ -I |root| example.cpp -o example **\\**
-        **~/boost/lib/libboost_regex-gcc-3.4-mt-d-1_34.a**
+        **~/boost/lib/libboost_regex-gcc34-mt-d-1_36.a**
 
 B. You can separately specify a directory to search (with ``-L``\
    *directory*) and a library name to search for (with ``-l``\
@@ -163,7 +170,7 @@ B. You can separately specify a directory to search (with ``-L``\
    .. parsed-literal::
 
      $ c++ -I |root| example.cpp -o example **\\**
-        **-L~/boost/lib/ -lboost_regex-gcc-3.4-mt-d-1_34**
+        **-L~/boost/lib/ -lboost_regex-gcc34-mt-d-1_36**
 
    As you can see, this method is just as terse as method A for one
    library; it *really* pays off when you're using multiple
@@ -225,7 +232,7 @@ Spoil Rock Hunter?”
    packages, we'd be glad to help.  Please make your interest known
    to the `Boost developers' list`_.
 
-   .. _Boost developers' list: ../../more/mailing_lists.htm#main
+   .. _Boost developers' list: http://www.boost.org/more/mailing_lists.htm#main
 
 .. [#lowercase-l] That option is a dash followed by a lowercase “L”
    character, which looks very much like a numeral 1 in some fonts.

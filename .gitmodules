@@ -330,3 +330,19 @@
 	path = libs/graph
 	url = http://github.com/boostorg/graph.git
         fetchRecurseSubmodules = on-demand
+[submodule "units"]
+	path = libs/units
+	url = http://github.com/boostorg/units.git
+        fetchRecurseSubmodules = on-demand
+[submodule "unordered"]
+	path = libs/unordered
+	url = http://github.com/boostorg/unordered.git
+        fetchRecurseSubmodules = on-demand
+[submodule "accumulators"]
+	path = libs/accumulators
+	url = http://github.com/boostorg/accumulators.git
+        fetchRecurseSubmodules = on-demand
+[submodule "proto"]
+	path = libs/proto
+	url = http://github.com/boostorg/proto.git
+        fetchRecurseSubmodules = on-demand
