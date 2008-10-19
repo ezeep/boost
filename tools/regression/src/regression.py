@@ -26,7 +26,7 @@ repo_path = {
     'trunk'         : 'trunk',
     'release'       : 'branches/release',
     'build'         : 'trunk/tools/build/v2',
-    'jam'           : 'tags/tools/jam/Boost_Jam_3_1_16/src',
+    'jam'           : 'tags/tools/jam/Boost_Jam_3_1_15/src',
     'regression'    : 'trunk/tools/regression',
     'boost-build.jam'
                     : 'trunk/boost-build.jam'
@@ -84,8 +84,6 @@ class runner:
             action='store_true' )
 
         #~ Connection Options:
-        opt.add_option( '--ftp',
-            help="FTP URL to upload results to." )
         opt.add_option( '--proxy',
             help="HTTP proxy server address and port (e.g.'http://www.someproxy.com:3128')" )
         opt.add_option( '--ftp-proxy',
@@ -123,7 +121,6 @@ class runner:
         self.local=None
         self.force_update=False
         self.have_source=False
-        self.ftp=None
         self.proxy=None
         self.ftp_proxy=None
         self.dart_server=None
@@ -140,10 +137,7 @@ class runner:
         self.regression_root = root
         self.boost_root = os.path.join( self.regression_root, 'boost' )
         self.regression_results = os.path.join( self.regression_root, 'results' )
-        if self.pjl_toolset != 'python':
-            self.regression_log = os.path.join( self.regression_results, 'bjam.log' )
-        else:
-            self.regression_log = os.path.join( self.regression_results, 'bjam.xml' )
+        self.regression_log = os.path.join( self.regression_results, 'bjam.log' )
         self.tools_bb_root = os.path.join( self.regression_root,'tools_bb' )
         self.tools_bjam_root = os.path.join( self.regression_root,'tools_bjam' )
         self.tools_regression_root = os.path.join( self.regression_root,'tools_regression' )
@@ -292,8 +286,7 @@ class runner:
     def command_setup(self):
         self.command_patch()
         self.build_if_needed(self.bjam,self.bjam_toolset)
-        if self.pjl_toolset != 'python':
-            self.build_if_needed(self.process_jam_log,self.pjl_toolset)
+        self.build_if_needed(self.process_jam_log,self.pjl_toolset)
     
     def command_test(self, *args):
         if not args or args == None or args == []: args = [ "test", "process" ]
@@ -312,8 +305,7 @@ class runner:
             self.command_test_run()
 
         if "process" in args:
-            if self.pjl_toolset != 'python':
-                self.command_test_process()
+            self.command_test_process()
     
     def command_test_clean(self):
         results_libs = os.path.join( self.regression_results, 'libs' )
@@ -323,18 +315,11 @@ class runner:
     
     def command_test_run(self):
         self.import_utils()
-        if self.pjl_toolset != 'python':
-            test_cmd = '%s -d2 --dump-tests %s "--build-dir=%s" >>"%s" 2>&1' % (
-                self.bjam_cmd( self.toolsets ),
-                self.bjam_options,
-                self.regression_results,
-                self.regression_log )
-        else:
-            test_cmd = '%s -d1 --dump-tests --verbose-test %s "--build-dir=%s" "--out-xml=%s"' % (
-                self.bjam_cmd( self.toolsets ),
-                self.bjam_options,
-                self.regression_results,
-                self.regression_log )
+        test_cmd = '%s -d2 --dump-tests %s "--build-dir=%s" >>"%s" 2>&1' % (
+            self.bjam_cmd( self.toolsets ),
+            self.bjam_options,
+            self.regression_results,
+            self.regression_log )
         self.log( 'Starting tests (%s)...' % test_cmd )
         cd = os.getcwd()
         os.chdir( os.path.join( self.boost_root, 'status' ) )
@@ -363,13 +348,18 @@ class runner:
             f.write( '<p>Tests are run on %s platform.</p>' % self.platform_name() )
             f.close()
 
+        if self.incremental:
+            run_type = 'incremental'
+        else:
+            run_type = 'full'
+
         source = 'tarball'
         revision = ''
         svn_root_file = os.path.join( self.boost_root, '.svn' )
         svn_info_file = os.path.join( self.boost_root, 'svn_info.txt' )
         if os.path.exists( svn_root_file ):
             source = 'SVN'
-            self.svn_command( 'info --xml "%s" >"%s"' % (self.boost_root,svn_info_file) )
+            self.svn_command( 'info --xml "%s" >%s' % (self.boost_root,svn_info_file) )
 
         if os.path.exists( svn_info_file ):
             f = open( svn_info_file, 'r' )
@@ -383,70 +373,30 @@ class runner:
                   revision += svn_info[i]
                   i += 1
 
-        if self.pjl_toolset != 'python':
-            from collect_and_upload_logs import collect_logs
-            if self.incremental:
-                run_type = 'incremental'
-            else:
-                run_type = 'full'
-            collect_logs(
-                self.regression_results,
-                self.runner, self.tag, self.platform, comment_path,
-                self.timestamp_path,
-                self.user,
-                source, run_type,
-                self.dart_server, self.proxy,
-                revision )
-        else:
-            from process_jam_log import BJamLog2Results
-            if self.incremental:
-                run_type = '--incremental'
-            else:
-                run_type = ''
-            BJamLog2Results([
-                '--output='+os.path.join(self.regression_results,self.runner+'.xml'),
-                '--runner='+self.runner,
-                '--comment='+comment_path,
-                '--tag='+self.tag,
-                '--platform='+self.platform,
-                '--source='+source,
-                '--revision='+revision,
-                run_type,
-                self.regression_log
-                ])
-            self.compress_file(
-                os.path.join(self.regression_results,self.runner+'.xml'),
-                os.path.join(self.regression_results,self.runner+'.zip')
-                )
+        from collect_and_upload_logs import collect_logs
+        collect_logs(
+            self.regression_results,
+            self.runner, self.tag, self.platform, comment_path,
+            self.timestamp_path,
+            self.user,
+            source, run_type,
+            self.dart_server, self.proxy,
+            revision )
         
     def command_upload_logs(self):
         self.import_utils()
         from collect_and_upload_logs import upload_logs
-        if self.ftp:
-            self.retry(
-                lambda:
-                    upload_logs(
-                        self.regression_results,
-                        self.runner, self.tag,
-                        self.user,
-                        self.ftp_proxy,
-                        self.debug_level, self.send_bjam_log,
-                        self.timestamp_path,
-                        self.dart_server,
-                        ftp_url = self.ftp )
-                )
-        else:
-            self.retry(
-                lambda:
-                    upload_logs(
-                        self.regression_results,
-                        self.runner, self.tag,
-                        self.user,
-                        self.ftp_proxy,
-                        self.debug_level, self.send_bjam_log,
-                        self.timestamp_path,
-                        self.dart_server )
-                )
+        self.retry(
+            lambda:
+                upload_logs(
+                    self.regression_results,
+                    self.runner, self.tag,
+                    self.user,
+                    self.ftp_proxy,
+                    self.debug_level, self.send_bjam_log,
+                    self.timestamp_path,
+                    self.dart_server )
+            )
     
     def command_regression(self):
         import socket
@@ -468,7 +418,7 @@ class runner:
                 b = os.path.basename( self.local )
                 tag = b[ 0: b.find( '.' ) ]
                 self.log( 'Tag: "%s"' % tag  )
-                self.unpack_tarball( self.local, self.boost_root )
+                self.unpack_tarball( local, self.boost_root )
                 
             elif self.have_source:
                 if not self.incremental: self.command_cleanup( [ 'bin' ] )
@@ -706,33 +656,6 @@ class runner:
         smtp_server.sendmail( self.mail, [ self.mail ],
             'Subject: %s\nTo: %s\n\n%s' % ( subject, self.mail, msg ) )
 
-    def compress_file( self, file_path, archive_path ):
-        self.import_utils()
-        utils.log( 'Compressing "%s"...' % file_path )
-
-        try:
-            import zipfile
-            z = zipfile.ZipFile( archive_path, 'w', zipfile.ZIP_DEFLATED )
-            z.write( file_path, os.path.basename( file_path ) )
-            z.close()
-            utils.log( 'Done writing "%s".'% archive_path )
-        except Exception, msg:
-            utils.log( 'Warning: Compressing falied (%s)' % msg )
-            utils.log( '         Trying to compress using a platform-specific tool...' )
-            try:
-                import zip_cmd
-            except ImportError:
-                script_dir = os.path.dirname( os.path.abspath( sys.argv[0] ) )
-                utils.log( 'Could not find \'zip_cmd\' module in the script directory (%s).' % script_dir )
-                raise Exception( 'Compressing failed!' )
-            else:
-                if os.path.exists( archive_path ):
-                    os.unlink( archive_path )
-                    utils.log( 'Removing stale "%s".' % archive_path )
-                    
-                zip_cmd.main( file_path, archive_path )
-                utils.log( 'Done compressing "%s".' % archive_path )
-
     #~ Dowloading source, from SVN...
 
     def svn_checkout( self ):
@@ -758,7 +681,7 @@ class runner:
             raise Exception( 'SVN command "%s" failed with code %d' % ( cmd, rc ) )
 
     def svn_repository_url( self, path ):
-        if self.user != 'anonymous' and self.user != '':
+        if hasattr(self,'user') and self.user is not None and self.user != 'anonymous':
             return '%s%s' % (repo_root['user'],path)
         else:
             return '%s%s' % (repo_root['anon'],path)
