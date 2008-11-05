@@ -2,6 +2,10 @@
 	path = libs/smart_ptr
 	url = http://github.com/boostorg/smart_ptr.git
         fetchRecurseSubmodules = on-demand
+[submodule "detail"]
+	path = libs/detail
+	url = http://github.com/boostorg/detail.git
+        fetchRecurseSubmodules = on-demand
 [submodule "serialization"]
 	path = libs/serialization
 	url = http://github.com/boostorg/serialization.git
