@@ -350,3 +350,7 @@
 	path = libs/flyweight
 	url = http://github.com/boostorg/flyweight.git
         fetchRecurseSubmodules = on-demand
+[submodule "scope_exit"]
+	path = libs/scope_exit
+	url = http://github.com/boostorg/scope_exit.git
+        fetchRecurseSubmodules = on-demand
