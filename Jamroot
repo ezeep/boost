@@ -16,6 +16,7 @@ path-constant BOOST_ROOT : [ os.environ BOOST_ROOT ] ;
 
 # record the root of the datalow directory structure
 path-constant TOP : . ;
+path-constant GGL : ../ggl ;	# ggl path (https://svn.boost.org/svn/boost/sandbox/ggl)
 
 # we are using Boost
 use-project boost : $(BOOST_ROOT) ;
@@ -29,7 +30,9 @@ project guigl
    : usage-requirements
         <include>.
         <include>$(BOOST_ROOT)
-    : requirements
+   : requirements
         <include>.
         <include>$(BOOST_ROOT)
+        <include>$(GGL)
+        <include>$(GGL)/boost/ggl
    ;
