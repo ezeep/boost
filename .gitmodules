@@ -6,6 +6,10 @@
 	path = libs/property_map
 	url = http://github.com/boostorg/property_map.git
         fetchRecurseSubmodules = on-demand
+[submodule "phoenix"]
+	path = libs/phoenix
+	url = http://github.com/boostorg/phoenix.git
+        fetchRecurseSubmodules = on-demand
 [submodule "exception"]
 	path = libs/exception
 	url = http://github.com/boostorg/exception.git
