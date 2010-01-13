@@ -330,6 +330,10 @@
 	path = libs/interprocess
 	url = http://github.com/boostorg/interprocess.git
         fetchRecurseSubmodules = on-demand
+[submodule "uuid"]
+	path = libs/uuid
+	url = http://github.com/boostorg/uuid.git
+        fetchRecurseSubmodules = on-demand
 [submodule "bimap"]
 	path = libs/bimap
 	url = http://github.com/boostorg/bimap.git
