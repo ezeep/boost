@@ -1,0 +1,4 @@
+[submodule "phoenix"]
+	path = libs/phoenix
+	url = http://github.com/boostorg/phoenix.git
+        fetchRecurseSubmodules = on-demand
