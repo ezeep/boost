@@ -1,0 +1,4 @@
+[submodule "date_time"]
+	path = libs/date_time
+	url = http://github.com/boostorg/date_time.git
+        fetchRecurseSubmodules = on-demand
