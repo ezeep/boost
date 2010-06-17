@@ -362,3 +362,7 @@
 	path = libs/scope_exit
 	url = http://github.com/boostorg/scope_exit.git
         fetchRecurseSubmodules = on-demand
+[submodule "msm"]
+	path = libs/msm
+	url = http://github.com/boostorg/msm.git
+        fetchRecurseSubmodules = on-demand
