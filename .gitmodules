@@ -366,3 +366,7 @@
 	path = libs/msm
 	url = http://github.com/boostorg/msm.git
         fetchRecurseSubmodules = on-demand
+[submodule "polygon"]
+	path = libs/polygon
+	url = http://github.com/boostorg/polygon.git
+        fetchRecurseSubmodules = on-demand
