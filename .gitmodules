@@ -1,0 +1,4 @@
+[submodule "pool"]
+	path = libs/pool
+	url = http://github.com/boostorg/pool.git
+        fetchRecurseSubmodules = on-demand
