@@ -350,6 +350,10 @@
 	path = libs/accumulators
 	url = http://github.com/boostorg/accumulators.git
         fetchRecurseSubmodules = on-demand
+[submodule "chrono"]
+	path = libs/chrono
+	url = http://github.com/boostorg/chrono.git
+        fetchRecurseSubmodules = on-demand
 [submodule "flyweight"]
 	path = libs/flyweight
 	url = http://github.com/boostorg/flyweight.git
