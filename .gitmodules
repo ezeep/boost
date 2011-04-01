@@ -374,6 +374,10 @@
 	path = libs/icl
 	url = http://github.com/boostorg/icl.git
         fetchRecurseSubmodules = on-demand
+[submodule "geometry"]
+	path = libs/geometry
+	url = http://github.com/boostorg/geometry.git
+        fetchRecurseSubmodules = on-demand
 [submodule "polygon"]
 	path = libs/polygon
 	url = http://github.com/boostorg/polygon.git
