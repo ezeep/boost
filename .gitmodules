@@ -378,6 +378,10 @@
 	path = libs/geometry
 	url = http://github.com/boostorg/geometry.git
         fetchRecurseSubmodules = on-demand
+[submodule "phoenix"]
+	path = libs/phoenix
+	url = http://github.com/boostorg/phoenix.git
+        fetchRecurseSubmodules = on-demand
 [submodule "polygon"]
 	path = libs/polygon
 	url = http://github.com/boostorg/polygon.git
