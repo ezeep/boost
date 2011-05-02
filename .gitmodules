@@ -1,0 +1,4 @@
+[submodule "msm"]
+	path = libs/msm
+	url = http://github.com/boostorg/msm.git
+        fetchRecurseSubmodules = on-demand
