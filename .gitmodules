@@ -1,0 +1,4 @@
+[submodule "preprocessor"]
+	path = libs/preprocessor
+	url = http://github.com/boostorg/preprocessor.git
+        fetchRecurseSubmodules = on-demand
