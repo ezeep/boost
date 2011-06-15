@@ -1,0 +1,4 @@
+[submodule "geometry"]
+	path = libs/geometry
+	url = http://github.com/boostorg/geometry.git
+        fetchRecurseSubmodules = on-demand
