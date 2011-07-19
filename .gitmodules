@@ -2,6 +2,10 @@
 	path = libs/smart_ptr
 	url = http://github.com/boostorg/smart_ptr.git
         fetchRecurseSubmodules = on-demand
+[submodule "auto_index"]
+	path = tools/auto_index
+	url = http://github.com/boostorg/auto_index.git
+        fetchRecurseSubmodules = on-demand
 [submodule "wave"]
 	path = libs/wave
 	url = http://github.com/boostorg/wave.git
