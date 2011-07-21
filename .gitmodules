@@ -390,3 +390,7 @@
 	path = libs/ratio
 	url = http://github.com/boostorg/ratio.git
         fetchRecurseSubmodules = on-demand
+[submodule "move"]
+	path = libs/move
+	url = http://github.com/boostorg/move.git
+        fetchRecurseSubmodules = on-demand
