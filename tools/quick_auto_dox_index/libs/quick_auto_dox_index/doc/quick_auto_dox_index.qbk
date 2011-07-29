@@ -520,8 +520,10 @@ To specify the location (actual images folder) of the admonitions:
 
 To ensure SVG admonitions are used for pdf:
 
+[pre
   <format>pdf:<xsl:param>admon.graphics.extension=".svg"
   <format>pdf:<xsl:param>admon.graphics.path=$(nav-images)/
+]
 
 To set the location of your images folder, usually /doc\/html\/ (not /doc/html\/images\/):
 
@@ -562,7 +564,7 @@ To use callouts see
 
 The location of the callout icons can be specified in your jamfile.v2 with
 [pre
-  #<xsl:param>callout.graphics.path=../../images/callouts//
+  #<xsl:param>callout.graphics.path=../../images/callouts/
 ] [/pre]
 
 The png icons themselves are at `/boost_1_46_0/tools/quickbook/doc/html/images/callouts`
@@ -595,17 +597,18 @@ and use these as $(BOOST_ROOT) in file specifications,
 for example: [@doc/html/boostbook.css].
 
 * You can 'read' environment variables, and use to copy a 'master' boostbook.css thus:
-
+[pre
   path-constant boost-root : [ modules.peek : BOOST ] ;
   install css-install : $(boost-root)/doc/src/boostbook.css : <location>html ;
+]
 
 * You can 'read' and display the location of other environment variables:
-
+[pre
   local boost_sandbox = [ os.environ BOOST_SANDBOX ] ;
   ECHO "os.environ boost-sandbox = " $(boost_sandbox) ; #  Upper case for the value of environment variable(s).
 
   os.environ boost-sandbox =  i:\boost-sandbox
-
+]
 *  To set (or change) MS environment variables, per user or globally, use
 Control Panel, System, Advanced System settings, Advanced tab, Environment variables.
 For examples, you could set BOOST_ROOT as `I:/boost_1_46_0/`.
@@ -618,9 +621,9 @@ Surprisingly, this will display the current value `BOOST_ROOT=I:/boost_1_46_0/`
 * You should be able to refer to files relative to XSL parameter boost-root
 [@boost:/boost/units/detail/utility.hpp] should make it relative to xsl parameter boost.root.
 in the `jamfile.v2`.
-
+[pre
   <xsl:param>boost.root=$(BOOST_ROOT)
-
+]
 [@http://www.boost.org/boost.png Boost logo]  \# xsl parameter boost.root, for example `I:/boost_1_46_0/boost.png`
 
 [endsect] [/section:windows Suggestions when using Windows]
@@ -636,9 +639,15 @@ in the `jamfile.v2`.
 
 #  The Windows Doxygen GUI frontend doxywizard will get you off to a (prematurely?) quick start,
 but you will soon find you need to use the 'Expert' options,
-and then perhaps to hand edit the `doxyfile`
-(annoyingly untyped so may need to set mime-type manually to commit to SVN)
-where all the very many options are stored.
+and then perhaps to hand edit the `doxyfile` where all the very many options are stored.
+
+#  It is useful to (re-)name the doxyfile from the default.
+This annoyingly untyped so you would need to set mime-type manually to commit to SVN.
+It also means that you cannot pin the doxyfile to the Windows 7 Doxywizard taskbar icon.
+If you are maintaining more than one library this is a nuisance.  It is also more convenient
+to have a separate name for each doxyfile,
+or you will have to wait for the tooltip to know doxyfile which is which.
+So this template example uses the name `quickdox_doxyfile.txt`.
 
 # It is worth getting a Doxygen-style index working well because the display is,
 for some purposes, more friendly and compact that the automatically produced 'Reference'
@@ -777,19 +786,18 @@ A 'Boost Standard' way of customising syntax colors has not been established.
 [note The path has to be relative to the destination directory.]
 
 # To add multiple stylesheets, you can provide a list, [*space separated]
-
+[pre
    <xsl:param>html.stylesheet="./html/boostbook.css ./html/my_style_preferences.css"
-
+]
 
 # To limit the width of text to 80 character width,
 you could add to a stylesheet (perhaps a second stylesheet)
-
+[pre
     html
     {
         max-width: 80em;
     }
-
-
+]
 
 [endsect] [/section:boostbook BoostBook]
 
@@ -884,6 +892,7 @@ of the Doxygen references section.  By convention, it is at the end, but before 
 
 [section:doxygen_macros How Doxygen parses and displays macros]
 
+[pre
     <doxygen:param>ENABLE_PREPROCESSING=YES # YES (default) evaluates conditional compilation statements (like #if) and evaluates macro definitions, but it does not perform macro expansion.
     <doxygen:param>MACRO_EXPANSION=YES # YES will expand all macro names in the source code (default = NO).
     <doxygen:param>EXPAND_ONLY_PREDEF=YES # If the EXPAND_ONLY_PREDEF and MACRO_EXPANSION tags are both set to YES
@@ -916,20 +925,20 @@ of the Doxygen references section.  By convention, it is at the end, but before 
       "list_impl=list" \\ # Replace text.
       "
     # BOOST_PREVENT_MACRO_SUBSTITUTION,  will not be replaced by ,
-    # BOOST_STATIC_CONSTANT will be replaced by "static x const y",
-    # BOOST_DEDUCED_TYPENAME will be replaced by "typename",
-    # BOOST_CONSTEXPR will be replaced by "constexpr".
+    # BOOST_STATIC_CONSTANT will be replaced by ['static x const y],
+    # BOOST_DEDUCED_TYPENAME will be replaced by ['typename],
+    # BOOST_CONSTEXPR will be replaced by ['constexpr].
 
-    # The syntax hoops to jump through are 'interesting' for more than one PREDEFINED item,
+    # The syntax hoops to jump through are ['interesting] for more than one PREDEFINED item,
     # and to permit spaces within definitions (use double quotes).
-    # Don't forget that every double quote needs a preceeding \trip character!
+    # Do not forget that every double quote needs a preceeding \trip character!
     # and that each trailing continuation \ needs a preceeding \trip character too!
     # And finally that if more than one item is included (as here) the whole is
-    # enclosed in "PREDEFINED=... ", but without any leading \.  Go figure...
+    # enclosed in PREDEFINED=... , but without any leading \.  Go figure...
 
     # A grep for PREDEFINED= in jamfiles will reveal even more complex examples.
     # Boost Libraries with useful examples are: Accumulators, Interprocess, MPI, Random, Units, Expressive.
-
+] [/pre]
 
 * If there's a 1-to-1 correspondence between the macro uses and the user-visible entities that they create,
 then you can just have Doxygen expand the macros to something that looks sane in the documentation.
@@ -941,7 +950,11 @@ A useful convention is that @ is used for markup like @c to get a
 [@http://www.stack.nl/~dimitri/doxygen/commands.html#cmdc typewriter font]
 (by convention, used for code and prefixed by the ['backwards single tick] in Quickbook),
 but backslash is used for \\pre, \\post \\returns etc that become part of the output text.
-So a C++/Doxygen comment example might be `\\\ \param n @c number of things \returns number of unique types of thing.`
+So a C++/Doxygen comment example might be
+
+[pre
+  \\\ \param n @c number of things \returns number of unique types of thing].
+]
 
 [endsect] [/section:doxygen_macros How Doxygen parses and displays macros]
 
@@ -1032,7 +1045,7 @@ by applying XSL Formatting Objects with program XSLTproc.exe.
 
 You need to install the RenderX XEP program at a location of your choice,
 and enter the address in your user-config.jam.  An example (at `C:\users\paul\`) is
-
+[pre
   #  Copyright (C) Vladimir Prus 2003. Permission to copy, use, modify, sell and
   #  distribute this software is granted provided this copyright notice appears in
   #  all copies. This software is provided "as is" without express or implied
@@ -1124,6 +1137,7 @@ and enter the address in your user-config.jam.  An example (at `C:\users\paul\`)
   #  for example to I:\boost_1_46_0\tools\build\v2 ...
   # Or bjam build will fail complaing of missing `auto-index.jam`.
   # This requirement will go away when autoindex is accepted as a Boost library.
+] [/pre]
 
 [caution All lines about FOP options in the jamfile are essential, even when using RenderX.]
 
