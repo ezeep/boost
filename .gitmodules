@@ -1,0 +1,4 @@
+[submodule "multiprecision"]
+	path = libs/multiprecision
+	url = http://github.com/boostorg/multiprecision.git
+        fetchRecurseSubmodules = on-demand
