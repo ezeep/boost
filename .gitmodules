@@ -394,6 +394,10 @@
 	path = libs/move
 	url = http://github.com/boostorg/move.git
         fetchRecurseSubmodules = on-demand
+[submodule "auto_index"]
+	path = tools/auto_index
+	url = http://github.com/boostorg/auto_index.git
+        fetchRecurseSubmodules = on-demand
 [submodule "locale"]
 	path = libs/locale
 	url = http://github.com/boostorg/locale.git
