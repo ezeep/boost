@@ -402,3 +402,7 @@
 	path = libs/locale
 	url = http://github.com/boostorg/locale.git
         fetchRecurseSubmodules = on-demand
+[submodule "container"]
+	path = libs/container
+	url = http://github.com/boostorg/container.git
+        fetchRecurseSubmodules = on-demand
