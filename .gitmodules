@@ -30,6 +30,18 @@
 	path = libs/iterator
 	url = http://github.com/boostorg/iterator.git
         fetchRecurseSubmodules = on-demand
+[submodule "locale"]
+	path = libs/locale
+	url = http://github.com/boostorg/locale.git
+        fetchRecurseSubmodules = on-demand
+[submodule "container"]
+	path = libs/container
+	url = http://github.com/boostorg/container.git
+        fetchRecurseSubmodules = on-demand
+[submodule "tti"]
+	path = libs/tti
+	url = http://github.com/boostorg/tti.git
+        fetchRecurseSubmodules = on-demand
 [submodule "graph_parallel"]
 	path = libs/graph_parallel
 	url = http://github.com/boostorg/graph_parallel.git
