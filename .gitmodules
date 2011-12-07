@@ -410,3 +410,7 @@
 	path = libs/units
 	url = http://github.com/boostorg/units.git
         fetchRecurseSubmodules = on-demand
+[submodule "heap"]
+	path = libs/heap
+	url = http://github.com/boostorg/heap.git
+        fetchRecurseSubmodules = on-demand
