@@ -70,6 +70,10 @@
 	path = libs/proto
 	url = http://github.com/boostorg/proto.git
         fetchRecurseSubmodules = on-demand
+[submodule "heap"]
+	path = libs/heap
+	url = http://github.com/boostorg/heap.git
+        fetchRecurseSubmodules = on-demand
 [submodule "tokenizer"]
 	path = libs/tokenizer
 	url = http://github.com/boostorg/tokenizer.git
