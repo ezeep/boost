@@ -1,0 +1,4 @@
+[submodule "math"]
+	path = libs/math
+	url = http://github.com/boostorg/math.git
+        fetchRecurseSubmodules = on-demand
