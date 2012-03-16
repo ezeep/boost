@@ -414,3 +414,11 @@
 	path = libs/heap
 	url = http://github.com/boostorg/heap.git
         fetchRecurseSubmodules = on-demand
+[submodule "local_function"]
+	path = libs/local_function
+	url = http://github.com/boostorg/local_function.git
+        fetchRecurseSubmodules = on-demand
+[submodule "context"]
+	path = libs/context
+	url = http://github.com/boostorg/context.git
+        fetchRecurseSubmodules = on-demand
