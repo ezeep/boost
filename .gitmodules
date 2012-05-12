@@ -1,0 +1,4 @@
+[submodule "type_erasure"]
+	path = libs/type_erasure
+	url = http://github.com/boostorg/type_erasure.git
+        fetchRecurseSubmodules = on-demand
