@@ -42,6 +42,10 @@
 	path = libs/iostreams
 	url = http://github.com/boostorg/iostreams.git
         fetchRecurseSubmodules = on-demand
+[submodule "multiprecision"]
+	path = libs/multiprecision
+	url = http://github.com/boostorg/multiprecision.git
+        fetchRecurseSubmodules = on-demand
 [submodule "coroutine"]
 	path = libs/coroutine
 	url = http://github.com/boostorg/coroutine.git
