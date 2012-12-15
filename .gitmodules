@@ -86,6 +86,10 @@
 	path = libs/heap
 	url = http://github.com/boostorg/heap.git
         fetchRecurseSubmodules = on-demand
+[submodule "lockfree"]
+	path = libs/lockfree
+	url = http://github.com/boostorg/lockfree.git
+        fetchRecurseSubmodules = on-demand
 [submodule "tokenizer"]
 	path = libs/tokenizer
 	url = http://github.com/boostorg/tokenizer.git
@@ -429,4 +433,8 @@
 [submodule "container"]
 	path = libs/container
 	url = http://github.com/boostorg/container.git
+        fetchRecurseSubmodules = on-demand
+[submodule "atomic"]
+	path = libs/atomic
+	url = http://github.com/boostorg/atomic.git
         fetchRecurseSubmodules = on-demand
