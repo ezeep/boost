@@ -126,3 +126,7 @@
 	path = libs/thread
 	url = http://github.com/boostorg/thread.git
         fetchRecurseSubmodules = on-demand
+[submodule "log"]
+	path = libs/log
+	url = http://github.com/boostorg/log.git
+        fetchRecurseSubmodules = on-demand
