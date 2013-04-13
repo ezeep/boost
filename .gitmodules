@@ -354,6 +354,10 @@
 	path = libs/mpl
 	url = http://github.com/boostorg/mpl.git
         fetchRecurseSubmodules = on-demand
+[submodule "log"]
+	path = libs/log
+	url = http://github.com/boostorg/log.git
+        fetchRecurseSubmodules = on-demand
 [submodule "regex"]
 	path = libs/regex
 	url = http://github.com/boostorg/regex.git
