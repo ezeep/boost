@@ -438,3 +438,7 @@
 	path = libs/multi_index
 	url = http://github.com/boostorg/multi_index.git
         fetchRecurseSubmodules = on-demand
+[submodule "log"]
+	path = libs/log
+	url = http://github.com/boostorg/log.git
+        fetchRecurseSubmodules = on-demand
