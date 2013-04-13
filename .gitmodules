@@ -350,3 +350,7 @@
 	path = libs/concept_check
 	url = http://github.com/boostorg/concept_check.git
         fetchRecurseSubmodules = on-demand
+[submodule "log"]
+	path = libs/log
+	url = http://github.com/boostorg/log.git
+        fetchRecurseSubmodules = on-demand
