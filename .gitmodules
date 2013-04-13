@@ -10,6 +10,10 @@
 	path = libs/smart_ptr
 	url = http://github.com/boostorg/smart_ptr.git
         fetchRecurseSubmodules = on-demand
+[submodule "log"]
+	path = libs/log
+	url = http://github.com/boostorg/log.git
+        fetchRecurseSubmodules = on-demand
 [submodule "rational"]
 	path = libs/rational
 	url = http://github.com/boostorg/rational.git
