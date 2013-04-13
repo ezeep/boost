@@ -122,3 +122,7 @@
 	path = libs/any
 	url = http://github.com/boostorg/any.git
         fetchRecurseSubmodules = on-demand
+[submodule "log"]
+	path = libs/log
+	url = http://github.com/boostorg/log.git
+        fetchRecurseSubmodules = on-demand
