@@ -86,3 +86,7 @@
 	path = libs/static_assert
 	url = http://github.com/boostorg/static_assert.git
         fetchRecurseSubmodules = on-demand
+[submodule "log"]
+	path = libs/log
+	url = http://github.com/boostorg/log.git
+        fetchRecurseSubmodules = on-demand
