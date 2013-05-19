@@ -434,6 +434,10 @@
 	path = libs/container
 	url = http://github.com/boostorg/container.git
         fetchRecurseSubmodules = on-demand
+[submodule "tti"]
+	path = libs/tti
+	url = http://github.com/boostorg/tti.git
+        fetchRecurseSubmodules = on-demand
 [submodule "log"]
 	path = libs/log
 	url = http://github.com/boostorg/log.git
