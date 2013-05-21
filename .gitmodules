@@ -30,6 +30,10 @@
 	path = libs/multi_index
 	url = http://github.com/boostorg/multi_index.git
         fetchRecurseSubmodules = on-demand
+[submodule "type_erasure"]
+	path = libs/type_erasure
+	url = http://github.com/boostorg/type_erasure.git
+        fetchRecurseSubmodules = on-demand
 [submodule "filesystem"]
 	path = libs/filesystem
 	url = http://github.com/boostorg/filesystem.git
