@@ -450,3 +450,7 @@
 	path = libs/atomic
 	url = http://github.com/boostorg/atomic.git
         fetchRecurseSubmodules = on-demand
+[submodule "predef"]
+	path = libs/predef
+	url = http://github.com/boostorg/predef.git
+        fetchRecurseSubmodules = on-demand
